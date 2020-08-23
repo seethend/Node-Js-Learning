@@ -26,7 +26,7 @@ router.post('/users', async(req, res) => {
         await user.save()
         const token = await user.generateAuthToken()
 
-        sendMain('Registration', 'Account created for ' + user.email)
+        // sendMain('Registration', 'Account created for ' + user.email)
 
         res.status(201).send({ user, token })
     } catch (e) {
